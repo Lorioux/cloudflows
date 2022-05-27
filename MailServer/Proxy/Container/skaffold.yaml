@@ -1,0 +1,17 @@
+apiVersion: skaffold/v2beta28
+kind: Config
+metadata:
+  name: container
+build:
+  artifacts:
+  - image: docker.io/devopsxpro/cloudwork-reverse-proxy
+    context: .
+    custom:
+      buildCommand: build.sh
+      dependencies:
+        dockerfile:
+          path: Dockerfile
+deploy:
+  kubectl:
+    manifests:
+    - deployment.yaml

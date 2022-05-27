@@ -1,0 +1,3 @@
+[submodule "runflows"]
+	path = runflows
+	url = https://github.com/Lorioux/run-flows.git
