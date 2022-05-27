@@ -7,7 +7,7 @@ class Processor:
         self.request = request
 
     def process(self):
-        data = json.load(self.request.get_data())
+        data = json.loads(self.request.get_data())
         print(data)
 
 @fnf.http
